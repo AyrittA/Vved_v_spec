@@ -34,7 +34,7 @@ def apply_delay(signal, delay_seconds=0.2, sr=44100, decay=0.5):
 def pitch_shift(signal, sr, n_steps):
     return librosa.effects.pitch_shift(signal, sr=sr, n_steps=n_steps)
 
-# Применение эффектов
+# Применение функций
 equalized_signal = apply_equalization(y, sr)
 reverb_signal = apply_reverb(equalized_signal)
 delayed_signal = apply_delay(equalized_signal, delay_seconds=0.25, sr=sr, decay=0.4)
